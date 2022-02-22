@@ -2,7 +2,7 @@ package Sample_Programs;
 
 import java.util.Arrays;
 
-public class DiffSum {
+public class SumofDiff {
     public static void main(String[] args) {
         int[] arr1 = {6,8,7,12};
         int[] arr2 = {3,7,6,10};
