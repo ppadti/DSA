@@ -8,27 +8,25 @@ public class ShiftChar {
         System.out.println("Enter a string: ");
         String str1 = sc.next();
         String s = "";
-        shift(s, str1);
-        
-
+        System.out.println(shift(s, str1));
     }
     static int count = 0;
-    static void shift(String p, String str) {
+  
+    static String shift(String p, String str) {
         if (str.isEmpty()) {
             for (int i = 0; i < count; i++) {
                 p = p + 'x';
             }
-            System.out.println(p);
-            return;
+        return p;
         }
     
         char ch = str.charAt(0);
         if ( ch == 'x') {
             count++;
-            shift( p, str.substring(1));
+            return shift( p, str.substring(1));
         }
         else{
-            shift(p + ch, str.substring(1));
+            return shift(p + ch, str.substring(1));
         }
 
     }
