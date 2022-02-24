@@ -5,7 +5,7 @@ import java.util.List;
 
 public class SubsetofArray {
     public static void main(String[] args) {
-        int[] arr = {1,3,3};
+        int[] arr = {1,2,3};
         List<List<Integer>> ans = subset(arr);
         for (List<Integer> list :ans) {
             System.out.println(list);
