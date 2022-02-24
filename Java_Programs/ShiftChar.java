@@ -23,9 +23,9 @@ public class ShiftChar {
         char ch = str.charAt(0);
         if ( ch == 'x') {
             count++;
-             return shift( p, str.substring(1));
+            return shift( p, str.substring(1));
         }
-        else{
+        else {
             return shift(p + ch, str.substring(1));
         }
 
