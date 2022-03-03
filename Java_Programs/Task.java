@@ -147,20 +147,18 @@ public class Task {
         return list;
     }
 
-    static void palindromicPartition(String p, String up) {
-        if (up.isEmpty()) {
-            if (isPalindrome(p)) {
-                p = p.replaceAll(" ", "");
-                if (s1.contains(p))
-                    System.out.println(p);
+   static void palindromicPartition(String p, String up) {
+        if (up.isEmpty())
+            System.out.println(p);
+
+        for (int i = 0; i < up.length(); i++) {
+            String f = up.substring(0, i + 1);
+            String s = up.substring(i + 1);
+            if (isPalindrome(f)) {
+                palindromicPartition(p + "[" + f + "]", s);
+
             }
-
-            return;
         }
-
-        char ch = up.charAt(0);
-        palindromicPartition(p, up.substring(1));
-        palindromicPartition(p + ch, up.substring(1));
     }
 
     static boolean isPalindrome(String str) {
